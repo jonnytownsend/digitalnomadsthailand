@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Digital Nomads Thailand</title>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .background-image {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: auto;
+      z-index: -1;
+    }
+
+    .logo-container {
+      width: 90%;
+      max-width: 600px;
+      z-index: 1;
+    }
+
+    .logo-container img {
+      width: 100%;
+      height: auto;
+      opacity: 1;
+      transition: opacity 1.5s ease-in-out;
+    }
+  </style>
+</head>
+<body>
+  <!-- Background image pinned to bottom -->
+  <img src="homepage-background.png" alt="Background" class="background-image" />
+
+  <!-- Centered logo -->
+  <div class="logo-container">
+    <img src="logo-DigitalNomadsThailand.png" id="logo" alt="Digital Nomads Thailand Logo" />
+  </div>
+
+  <!-- JavaScript fade effect -->
+  <script>
+    const logo = document.getElementById('logo');
+    let fadingOut = true;
+
+    setInterval(() => {
+      logo.style.opacity = fadingOut ? 0.65 : 1;
+      fadingOut = !fadingOut;
+    }, 1500);
+  </script>
+</body>
+</html>
